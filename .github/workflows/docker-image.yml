@@ -28,7 +28,7 @@ jobs:
       id: docker_build
       uses: docker/build-push-action@v5
       with:
-        tags: tlphong/gpt-discord-bot:latest,yourusername/gpt-discord-bot:${{ github.run_number }}
+        tags: tlphong/gpt-discord-bot:latest,tlphong/gpt-discord-bot:${{ github.run_number }}
         push: ${{ github.event_name != 'pull_request' }}  # Ensures image is pushed only on pushes to main, not on PRs
 
     - name: Print output image tag
