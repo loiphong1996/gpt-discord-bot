@@ -78,8 +78,8 @@ async def chat_command(
     int: discord.Interaction,
     message: str,
     model: AVAILABLE_MODELS = DEFAULT_MODEL,
-    temperature: Optional[float] = 1.0,
-    max_tokens: Optional[int] = 512,
+    temperature: Optional[float] = 0.7,
+    max_tokens: Optional[int] = 4096,
 ):
     try:
         # only support creating thread in text channel
